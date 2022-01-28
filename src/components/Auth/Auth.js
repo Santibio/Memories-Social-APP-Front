@@ -16,6 +16,8 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import {signin, signup} from '../../actions/auth'
 
+const GOOGLE_ID = process.env.REACT_APP_GOOGLE_ID;
+
 const initialState = {
   firstName: "",
   lastName: "",
@@ -129,7 +131,7 @@ const Auth = () => {
             {isSignup ? "Sign Up" : "Sign In"}
           </Button>
           <GoogleLogin
-            clientId="734597170449-0ka8s1e4jaeoffln9mskr4elnjtlijbm.apps.googleusercontent.com"
+            clientId={process.env.REACT_APP_GOOGLE_ID}
             render={(renderProps) => (
               <Button
                 className={classes.googleButton}

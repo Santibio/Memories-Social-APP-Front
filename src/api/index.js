@@ -3,7 +3,7 @@ import axios from "axios";
 const productionURL = "https://memories-project-s.herokuapp.com/"; 
 const developmentURL = "http://localhost:5000/"; 
 const API = axios.create({
-  baseURL: productionURL,
+  baseURL: developmentURL,
 });
 
 API.interceptors.request.use((req)=>{
